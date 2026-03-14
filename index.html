@@ -1,4 +1,65 @@
-<p>This is a new repo.</p>
-<p>This is a new feature(dropdown)</p>
-<p>This is a new feature(button)</p>
-<p>Final Feature Added</p>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sweet Crumbs Bakery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="nav">
+        <h1>Sweet Crumbs</h1>
+        <button id="cartButton" class="cart-btn" aria-label="Open cart">
+          🧺 Cart (<span id="cartCount">0</span>)
+        </button>
+      </nav>
+
+      <div class="hero-content">
+        <p class="eyebrow">Fresh every morning</p>
+        <h2>Handmade pastries, breads, and celebration cakes</h2>
+        <p>
+          Explore our best sellers and add items to your order. Perfect for tea
+          time, birthdays, and cozy weekends.
+        </p>
+        <a href="#menu" class="cta">Browse Menu</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="controls" id="menu">
+        <label for="categoryFilter">Filter by category</label>
+        <select id="categoryFilter">
+          <option value="all">All Items</option>
+          <option value="bread">Bread</option>
+          <option value="pastry">Pastry</option>
+          <option value="cake">Cake</option>
+          <option value="cookie">Cookie</option>
+        </select>
+      </section>
+
+      <section>
+        <h3>Our Menu</h3>
+        <div id="menuGrid" class="menu-grid" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <aside id="cartPanel" class="cart-panel" aria-hidden="true">
+      <div class="cart-header">
+        <h4>Your Order</h4>
+        <button id="closeCart" aria-label="Close cart">✕</button>
+      </div>
+      <ul id="cartItems"></ul>
+      <p class="cart-total">Total: $<span id="cartTotal">0.00</span></p>
+      <button class="checkout-btn">Checkout</button>
+    </aside>
+
+    <script src="script.js"></script>
+  </body>
+</html>
